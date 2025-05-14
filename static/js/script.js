@@ -6,13 +6,13 @@ const expandBtn = document.querySelector(".expand-btn");
 // Add click events to buttons
 loginBtn.addEventListener("click", () => {
   // Redirect to login page
-  window.location.href = "./templates/login.html";
+  window.location.href = "login.html";
 });
 
 signupBtn.addEventListener("click", () => {
   // Will be implemented later with signup page
   console.log("Sign up button clicked");
-  window.location.href = "./templates/signup.html";
+  window.location.href = "signup.html";
 });
 
 // Book animation
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const loginButton = document.querySelector(".login-btn");
   if (loginButton) {
     loginButton.addEventListener("click", function () {
-      window.location.href = "./templates/login.html";
+      window.location.href = "login.html";
     });
   }
 
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const signupButton = document.querySelector(".signup-btn");
   if (signupButton) {
     signupButton.addEventListener("click", function () {
-      window.location.href = "./templates/signup.html";
+      window.location.href = "signup.html";
     });
   }
 });
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (loginButton) {
     loginButton.addEventListener("click", function (e) {
       e.preventDefault();
-      window.location.href = "./templates/login.html";
+      window.location.href = "login.html";
     });
   }
 
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (signupButton) {
     signupButton.addEventListener("click", function (e) {
       e.preventDefault();
-      window.location.href = "./templates/signup.html";
+      window.location.href = "signup.html";
     });
   }
 
