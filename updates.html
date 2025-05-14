@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSwap - Updates</title>
+    <link rel="stylesheet" href="../static/css/updates.css">
+    <link rel="stylesheet" href="../static/css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+       <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-container">
+                <a href="profile.html">
+                    <img src="../static/images/profile.png" alt="User avatar" class="user-avatar">
+                </a>
+            </div>
+            
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="home.html"><span>Home</span></a></li>
+                     <!-- HTML Structure -->
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Requests <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="requestsent.html">Requests Sent</a>
+                            <a href="requestreceived.html">Requests Received</a>
+                        </div>
+                    </li>
+                    <li><a href="addbook.html"><span>Add Book</span></a></li>
+                    <li><a href="updates.html"><span>Updates</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="favorite-btn">
+                <a href="#"><i class="far fa-heart"></i></a>
+            </div>
+        </div>
+        <main class="main-content">
+            <header class="header">
+                <h1>BookSwap</h1>
+            </header>
+            <section class="updates-section">
+                <h2>Updates</h2>
+                <div class="updates-container">
+                    <div class="update-item">
+                        <div class="update-message">
+                            "Your request for [Book Name] by [Author] has been sent to the owner. You will be notified once they respond."
+                        </div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-message">
+                            "Great news! Your request for [Book Name] has been approved by [Owner Name]. Please coordinate for pickup."
+                        </div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-message">
+                            "Reminder: Your borrowed book [Book Name] is due for return tomorrow. Please return it on time."
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../static/js/updates.js"></script>
+    <script src="../static/js/home.js"></script>
+</body>
+</html>

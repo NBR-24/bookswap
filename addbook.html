@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSwap</title>
+    <link rel="stylesheet" href="../static/css/addbook.css">
+    <link rel="stylesheet" href="../static/css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+   <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-container">
+                <a href="profile.html">
+                    <img src="../static/images/profile.png" alt="User avatar" class="user-avatar">
+                </a>
+            </div>
+            
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="home.html"><span>Home</span></a></li>
+                     <!-- HTML Structure -->
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Requests <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="requestsent.html">Requests Sent</a>
+                            <a href="requestreceived.html">Requests Received</a>
+                        </div>
+                    </li>
+                    <li><a href="addbook.html"><span>Add Book</span></a></li>
+                    <li><a href="updates.html"><span>Updates</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="favorite-btn">
+                <a href="#"><i class="far fa-heart"></i></a>
+            </div>
+        </div>
+        <main class="main-content">
+            <header class="header">
+                <h1>BookSwap</h1>
+            </header>
+            <section class="book-details">
+                <h2>Book Details</h2>
+                <form id="addBookForm">
+                    <div class="form-layout">
+                        <div class="form-fields">
+                            <div class="form-group">
+                                <label for="bookName">Book</label>
+                                <input type="text" id="bookName" placeholder="Book's Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="authorName">Author</label>
+                                <input type="text" id="authorName" placeholder="Author's Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Category</label>
+                                <input type="text" id="category" placeholder="General/Study/Tech" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <input type="text" id="description" placeholder="150 words" required>
+                            </div>
+                            <div class="mode-selection">
+                                <div class="radio-option">
+                                    <input type="radio" id="offlineMode" name="mode" value="offline" checked>
+                                    <label for="offlineMode">Offline Mode</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="onlineMode" name="mode" value="online">
+                                    <label for="onlineMode">Online Mode</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cover-upload">
+                            <div id="coverPreview" class="cover-preview">
+                                <p>Upload Cover Page</p>
+                                <input type="file" id="coverImage" accept="image/*" hidden>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="add-button">Add</button>
+                </form>
+            </section>
+            <div class="book-stack-decoration"></div>
+        </main>
+    </div>
+    <script src="../static/js/addbook.js"></script>
+    <script src="../static/js/home.js"></script>
+</body>
+</html>

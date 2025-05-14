@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSwap - Home</title>
+    <link rel="stylesheet" href="../static/css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-container">
+                <a href="profile.html">
+                    <img src="../static/images/profile.png" alt="User avatar" class="user-avatar">
+                </a>
+            </div>
+            
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="home.html"><span>Home</span></a></li>
+                     <!-- HTML Structure -->
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Requests <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="requestsent.html">Requests Sent</a>
+                            <a href="requestreceived.html">Requests Received</a>
+                        </div>
+                    </li>
+                    <li><a href="addbook.html"><span>Add Book</span></a></li>
+                    <li><a href="updates.html"><span>Updates</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="favorite-btn">
+                <a href="#"><i class="far fa-heart"></i></a>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Search Bar -->
+            <header class="header">
+                <div class="logo">BookSwap</div>
+                <div class="search-container">
+                    <div class="search-input">
+                        <span class="search-icon"><i class="fas fa-search"></i></span>
+                        <input type="text" placeholder="find book">
+                    </div>
+                    <button class="search-btn">search</button>
+                </div>
+            </header>
+            
+           
+            <section class="category-section">
+                <h2 class="section-title">Category</h2>
+                <div class="category-filters">
+                    <div class="category-filter dropdown">
+                        <button class="dropdown-toggle">General <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-menu">
+                            <div> Fiction</div>
+                            <div>Non Fiction</div>
+                            <div>Comics</div>
+                        </div>
+                    </div>
+                    <div class="category-filter dropdown">
+                        <button class="dropdown-toggle">Study <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-menu">
+                            <div> Notes</div>
+                            <div>PDF Notes</div>
+                            <div>Exam Guide</div>
+                        </div>
+                    </div>
+                    <div class="category-filter dropdown">
+                        <button class="dropdown-toggle">Tech <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-menu">
+                            <div>Science</div>
+                            <div>Engineering</div>
+                            <div>Finance</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Available Books Section -->
+            <section class="books-section">
+                <div class="section-header">
+                    <h2>Available</h2>
+                    <div class="navigation-arrows">
+                        <button class="nav-arrow prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="nav-arrow next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                
+                <div class="books-container">
+                    <!-- Book Card 1 -->
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="../static/images/book1.jpg" alt="Pride and Prejudice">
+                            <button class="favorite-icon"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="book-info">
+                            <div class="book-category">Category: General</div>
+                            <div class="book-author">By Jane Austen</div>
+                            <div class="book-title">Pride and Prejudice</div>
+                            <a href="request.html">
+                                <button class="borrow-btn">Request To Borrow</button>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Book Card 2 -->
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="../static/images/book1.jpg" alt="Pride and Prejudice">
+                            <button class="favorite-icon"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="book-info">
+                            <div class="book-category">Category: General</div>
+                            <div class="book-author">By Jane Austen</div>
+                            <div class="book-title">Pride and Prejudice</div>
+                            <a href="request.html">
+                                <button class="borrow-btn">Request To Borrow</button>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Book Card 3 -->
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="../static/images/book1.jpg" alt="Pride and Prejudice">
+                            <button class="favorite-icon"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="book-info">
+                            <div class="book-category">Category: General</div>
+                            <div class="book-author">By Jane Austen</div>
+                            <div class="book-title">Pride and Prejudice</div>
+                            <a href="request.html">
+                                <button class="borrow-btn">Request To Borrow</button>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Book Card 4 -->
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="../static/images/book1.jpg" alt="Pride and Prejudice">
+                            <button class="favorite-icon"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="book-info">
+                            <div class="book-category">Category: General</div>
+                            <div class="book-author">By Jane Austen</div>
+                            <div class="book-title">Pride and Prejudice</div>
+                            <a href="request.html">
+                                <button class="borrow-btn">Request To Borrow</button>
+                            </a>
+                        </div>
+                    </div>
+                     
+                    <!-- Book Card 5 (partial) -->
+                    <div class="book-card partial">
+                        <div class="book-cover">
+                            <img src="../static/images/book1.jpg" alt="Pride and Prejudice">
+                            <button class="favorite-icon"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="book-info">
+                            <div class="book-category">Category: General</div>
+                            <div class="book-author">By Jane Austen</div>
+                            <div class="book-title">Pride and Prejudice</div>
+                            <a href="request.html">
+                                <button class="borrow-btn">Request To Borrow</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <script src="../static/js/home.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,449 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 150px;
+    background-color: #eae5dc;
+    border-right: 1px solid #d6cec4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    position: fixed;
+    height: 100%;
+}
+
+.logo-container {
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Sidebar navigation */
+.sidebar-nav {
+    width: 100%;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+.sidebar-nav ul {
+    list-style-type: none;
+}
+
+.sidebar-nav li {
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-nav li.active {
+    background-color: rgba(244, 120, 52, 0.1);
+    border-left: 3px solid #f47834;
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    color: #777;
+    font-size: 16px;
+    transition: color 0.3s;
+    padding: 10px 20px;
+    display: block;
+    width: 100%;
+}
+
+.sidebar-nav a:hover {
+    color: #f47834;
+}
+
+.sidebar-nav li.active a {
+    color: #f47834;
+    font-weight: 500;
+}
+
+.sidebar-nav li:hover {
+    background-color: rgba(244, 120, 52, 0.05);
+}
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #8c7e6a;
+    padding: 12px 20px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f5f0e8;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+.dropdown-menu a {
+    color: #8c7e6a;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    color: #f47834;
+    background-color: rgba(244, 120, 52, 0.05);
+}
+
+/* Favorite button styling */
+.favorite-btn {
+    margin-top: auto;
+    margin-bottom: 40px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-btn a {
+    text-decoration: none;
+}
+
+.favorite-btn i {
+    font-size: 24px;
+    color: #f47834;
+}
+
+/* Main content styles */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    margin-left: 150px;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.logo {
+    color: #777;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.page-title {
+    font-size: 42px;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+/* Request cards */
+.requests-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #eae5dc;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.request-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+    transition: opacity 0.5s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.request-by {
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.requester-name {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.book-image {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.book-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.heart-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.heart-button i {
+    color: #777;
+    transition: color 0.3s;
+}
+
+.heart-button i.fa-solid {
+    color: #ff6b6b;
+}
+
+.book-category, .book-author {
+    color: #777;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.book-title {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.approve-button, .reject-button {
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.approve-button {
+    background-color: #1db954;
+    color: #fff;
+}
+
+.approve-button:hover {
+    background-color: #18a046;
+}
+
+.reject-button {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.reject-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Quote styles */
+.quote {
+    margin-top: 40px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.quote-text {
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.quote-author {
+    color: #f47834;
+    font-size: 18px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .sidebar-nav {
+        display: flex;
+        margin-top: 0;
+    }
+
+    .sidebar-nav ul {
+        display: flex;
+    }
+
+    .sidebar-nav li {
+        padding: 10px 15px;
+        margin-bottom: 0;
+    }
+
+    .sidebar-nav li.active {
+        border-left: none;
+        border-bottom: 3px solid #f47834;
+    }
+
+    .dropdown-menu {
+        left: 0;
+        top: 100%;
+        width: 100%;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .logo-container {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .favorite-btn {
+        margin-top: 0;
+    }
+    
+   .requests-container {
+        flex-direction: column;
+    }
+
+    .request-card {
+        width: 100%;
+    }
+}
+/* Add this to your requestreceived.css file */
+.request-card {
+    transition: opacity 0.5s ease;
+    position: relative;
+    /* Add a margin-bottom to ensure cards don't jump when others are removed */
+    margin-bottom: 15px;
+}
+
+/* Fix to make sure fixed dimensions don't cause layout issues */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Ensure proper spacing between cards */
+.request-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* Container for request cards */
+.main-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Card styling */
+.request-card {
+    /* Fixed dimensions and layout */
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    
+    /* Smooth transitions */
+    transition: opacity 0.5s ease;
+    
+    /* Prevent expansion */
+    overflow: hidden;
+    
+    /* Card appearance */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+/* Container to keep cards in a grid */
+.request-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+/* Ensure buttons maintain consistent size */
+.approve-button, .reject-button {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Make sure images don't cause layout shifts */
+.request-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}

@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #e8e0d5;
+    color: #000;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    padding: 20px;
+}
+
+/* Logo Styling */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo h1 {
+    color: #8a7c7c;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+/* Books Stack Illustration */
+.books-stack {
+    position: absolute;
+    left: 40px; /* Adjusted for better placement */
+    bottom: 20px; /* Keeps it anchored to the bottom */
+    width: 550px; /* Adjusted for a proportional size */
+    height: 500px;
+    background-image: url('../images/signuppic.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
+/* Login Container Styling */
+.login-container {
+    background: white;
+    width: 60%;
+    max-width: 600px;
+    min-height: 500px;
+    margin-left: auto;
+    margin-right: 20px; 
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-header {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+.login-header h2 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.login-subheader {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.login-subheader p {
+    font-size: 18px;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #f47834;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #f47834;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #e26a28;
+}
+
+.error-message {
+    color: #ff3333;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+.login-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #f47834;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #e26a28;
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+    .login-container {
+        width: 70%;
+    }
+    
+    .books-stack {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .logo {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 20px;
+        align-self: flex-start;
+    }
+    
+    .books-stack {
+        display: none;
+    }
+    
+    .login-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    #email-error {
+        color: #ff3333;
+        font-size: 14px;
+        margin-top: 5px;
+        display: none;
+    }
+}

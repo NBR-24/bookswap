@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #e8e0d5;
+    color: #000;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #000;
+}
+
+.logo h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.login-btn, .signup-btn {
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn {
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #000;
+}
+
+.signup-btn {
+    background-color: #f47834;
+    border: none;
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.signup-btn:hover {
+    background-color: #e26a28;
+}
+
+/* Content Styles */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.left-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.main-heading h2 {
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 0.9;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.expand-btn {
+    background-color: transparent;
+    border: 1px solid #333;
+    border-radius: 25px;
+    padding: 15px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+}
+
+.expand-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.quote {
+    max-width: 450px;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.quote p {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.author {
+    color: #f47834;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.right-content {
+    flex: 1;
+    position: relative;
+    height: 500px;
+}
+
+/* Book Stack Styles */
+.book-stack {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    perspective: 800px;
+}
+
+.book {
+    position: absolute;
+    height: 80%;
+    width: 60px;
+    transform-origin: bottom left;
+    transform-style: preserve-3d;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.book1 {
+    background-color: #f47834;
+    transform: rotate(20deg) translateX(100px);
+    right: 200px;
+    z-index: 3;
+}
+
+.book2 {
+    background-color: #2b4472;
+    transform: rotate(10deg) translateX(50px);
+    right: 150px;
+    z-index: 2;
+}
+
+.book3 {
+    background-color: #f4c26f;
+    transform: rotate(0deg);
+    right: 100px;
+    z-index: 1;
+}
+
+.book-dot {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    margin-bottom: 100px;
+}
+
+.book-label {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .main-heading h2 {
+        font-size: 90px;
+    }
+    
+    .book-stack {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    
+    .left-content {
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 50px;
+    }
+    
+    .main-heading h2 {
+        font-size: 70px;
+    }
+    
+    .quote {
+        margin: 20px auto;
+    }
+    
+    .right-content {
+        height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .main-heading h2 {
+        font-size: 50px;
+    }
+    
+    .expand-btn {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+    
+    .book-stack {
+        transform: scale(0.7);
+    }
+}
+
+.right-content {
+    flex: 1;
+    position: relative;
+    height: 500px;
+    background-image: url('../images/1stpage.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}

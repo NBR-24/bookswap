@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSwap - Request Sent</title>
+    <link rel="stylesheet" href="../static/css/requestsent.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/home.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-container">
+                <a href="profile.html">
+                    <img src="../static/images/profile.png" alt="User avatar" class="user-avatar">
+                </a>
+            </div>
+            
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="home.html"><span>Home</span></a></li>
+                     <!-- HTML Structure -->
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Requests <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="requestsent.html">Requests Sent</a>
+                            <a href="requestreceived.html">Requests Received</a>
+                        </div>
+                    </li>
+                    <li><a href="addbook.html"><span>Add Book</span></a></li>
+                    <li><a href="updates.html"><span>Updates</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="favorite-btn">
+                <a href="#"><i class="far fa-heart"></i></a>
+            </div>
+        </div>
+        <main class="main-content">
+            <header class="header">
+                <h1 class="logo">BookSwap</h1>
+            </header>
+
+            <section class="content">
+                <h2 class="page-title">Request Sent</h2>
+
+                <div class="book-requests">
+                    <div class="book-request">
+                        <div class="book-card">
+                            <img src="../static/images/book1.jpg" alt="Pride and Prejudice" class="book-cover">
+                            <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                            <div class="book-info">
+                                <div class="book-category">Category: General</div>
+                                <div class="book-author">By Jane Austene</div>
+                                <div class="book-title">Pride and Prejudice</div>
+                                <div class="request-status pending">Pending</div>
+                                <button class="cancel-btn">Cancel Request</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="book-request">
+                        <div class="book-card">
+                            <img src="../static/images/book1.jpg" alt="Pride and Prejudice" class="book-cover">
+                            <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                            <div class="book-info">
+                                <div class="book-category">Category: General | Due Date: dd/mm/yy</div>
+                                <div class="book-author">By Jane Austene</div>
+                                <div class="book-title">Pride and Prejudice</div>
+                                <div class="request-status approved">Approved</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="book-request">
+                        <div class="book-card">
+                            <img src="../static/images/book1.jpg" alt="Pride and Prejudice" class="book-cover">
+                            <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                            <div class="book-info">
+                                <div class="book-category">Category: General</div>
+                                <div class="book-author">By Jane Austene</div>
+                                <div class="book-title">Pride and Prejudice</div>
+                                <div class="request-status rejected">Rejected</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-request">
+                        <div class="book-card">
+                            <img src="../static/images/book1.jpg" alt="Pride and Prejudice" class="book-cover">
+                            <button class="favorite-btn"><i class="far fa-heart"></i></button>
+                            <div class="book-info">
+                                <div class="book-category">Category: General</div>
+                                <div class="book-author">By Jane Austene</div>
+                                <div class="book-title">Pride and Prejudice</div>
+                                <div class="request-status pending">Pending</div>
+                                <button class="cancel-btn">Cancel Request</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="quote">
+                    <p>"Show me a family of readers, and I will show you the people who move the world."</p>
+                    <cite>– Napoleon Bonaparte</cite>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="../static/js/requestsent.js"></script>
+    <script src="../static/js/home.js"></script>
+</body>
+</html>

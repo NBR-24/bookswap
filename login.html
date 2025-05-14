@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSwap - Login</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <h1>BookSwap</h1>
+        </div>
+        
+        <!-- Book Stack Illustration -->
+        <div class="books-stack"></div>
+        
+        <!-- Login Form Container -->
+        <div class="login-container">
+            <div class="login-header">
+                <h2>Welcome back!</h2>
+            </div>
+            
+            <div class="login-subheader">
+                <p>Everyday is a chance to make difference.</p>
+            </div>
+            
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your college email">
+                    <span class="error-message" id="email-error">Email must end with @gecskp.ac.in</span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                </div>
+                
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="../static/js/login.js"></script>
+</body>
+</html>

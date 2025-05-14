@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSwap - Sign Up</title>
+    <link rel="stylesheet" href="../static/css/signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <h1>BookSwap</h1>
+        </div>
+        
+        <!-- Signup Card -->
+        <div class="signup-card">
+            <div class="header">
+                <h2>Hi,Reader</h2>
+                <div class="divider"></div>
+                <h3>Sign up</h3>
+            </div>
+            
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" placeholder="Enter your College email" required>
+                    <span class="error-message" id="email-error">Email must end with @gecskp.ac.in</span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter Password" required>
+                </div>
+                
+                <button type="submit" class="signup-btn">Sign Up</button>
+                
+                <div class="divider-container">
+                    <div class="line"></div>
+                    <span>Or</span>
+                    <div class="line"></div>
+                </div>
+                
+                <div class="login-link">
+                    <p>Have an account? <a href="login.html">Login</a></p>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Book Stack Illustration -->
+        <div class="books-stack"></div>
+    </div>
+    <script src="../static/js/signup.js"></script>
+</body>
+</html>

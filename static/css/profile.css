@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f3eb;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 150px;
+    background-color: #eae5dc;
+    border-right: 1px solid #d6cec4;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.logo-container {
+    margin-bottom: 40px;
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+}
+
+.avatar, .user-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.nav-links, .sidebar-nav {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 40px;
+    flex-grow: 1;
+}
+
+/* Sidebar navigation */
+.nav-links li, .sidebar-nav li {
+    margin-bottom: 15px;
+    padding: 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-links li.active, .sidebar-nav li.active {
+    background-color: rgba(244, 120, 52, 0.1);
+    border-left: 3px solid #f47834;
+}
+
+.nav-links a, .sidebar-nav li a {
+    text-decoration: none;
+    color: #777;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    padding: 10px 20px;
+    width: 100%;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-links li.active a, .sidebar-nav li.active a {
+    color: #f47834;
+    font-weight: 500;
+}
+
+.nav-links a:hover, .sidebar-nav li a:hover {
+    color: #f47834;
+}
+
+/* Dropdown styles */
+.dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.dropdown-toggle i {
+    font-size: 12px;
+    transition: transform 0.3s;
+}
+
+.dropdown.active .dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    display: none;
+    background-color: #f5f1e8;
+    padding: 5px 0;
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.dropdown-menu a {
+    padding: 8px 20px 8px 30px;
+    font-size: 14px;
+}
+
+.dropdown.active .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    color: #f47834;
+    background-color: rgba(244, 120, 52, 0.05);
+}
+
+/* Favorite button */
+.favorites-button, .favorite-btn {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.favorites-button i, .favorite-btn a {
+    color: #f47834;
+    font-size: 24px;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 150px;
+}
+
+.app-header {
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #5a5a5a;
+}
+
+.app-header h1 {
+    color: #888;
+    font-weight: normal;
+}
+
+/* Profile section */
+.profile-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.profile-container {
+    display: flex;
+    gap: 20px;
+}
+
+.profile-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile-image-container {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+    transition: border 0.3s ease-in-out;
+}
+
+.profile-image-container:hover {
+    border: 2px solid #f47834;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile-name {
+    font-size: 40px;
+    color: #f47834;
+    margin-bottom: 15px;
+}
+
+.book-stats {
+    text-align: center;
+    font-size: 18px;
+}
+
+.book-stats p {
+    margin-bottom: 5px;
+}
+
+/* Profile info card */
+.profile-right {
+    flex: 1;
+}
+
+.profile-info-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    border: 2px solid #f47834;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.info-item {
+    margin-bottom: 30px;
+}
+
+.info-label {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.info-value {
+    font-size: 20px;
+    color: #f47834;
+}
+
+.edit-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f47834;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 40px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+    background-color: #e36724;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #f9f3eb;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    padding: 30px;
+    border-radius: 15px;
+    width: 60%;
+    max-width: 600px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.save-button {
+    background-color: #f47834;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+}
+
+.save-button:hover {
+    background-color: #e36724;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .profile-container {
+        flex-direction: column;
+    }
+    
+    .modal-content {
+        width: 90%;
+    }
+}

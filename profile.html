@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSwap - Profile</title>
+    <link rel="stylesheet" href="../static/css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/home.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-container">
+                <a href="profile.html">
+                    <img src="../static/images/profile.png" alt="User avatar" class="user-avatar">
+                </a>
+            </div>
+            
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="home.html"><span>Home</span></a></li>
+                     <!-- HTML Structure -->
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Requests <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="requestsent.html">Requests Sent</a>
+                            <a href="requestreceived.html">Requests Received</a>
+                        </div>
+                    </li>
+                    <li><a href="addbook.html"><span>Add Book</span></a></li>
+                    <li><a href="updates.html"><span>Updates</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="favorite-btn">
+                <a href="#"><i class="far fa-heart"></i></a>
+            </div>
+        </div>
+
+        <main class="main-content">
+            <header class="app-header">
+                <div>BookSwap</div>
+            </header>
+
+            <section class="profile-section">
+                <h2>Profile</h2>
+                
+                <div class="profile-container">
+                    <div class="profile-left">
+                        <div class="profile-image-container">
+                            <img src="../static/images/profile.png" alt="Navami's Profile Picture" class="profile-image" id="profile-image">
+                        </div>
+                        <h3 class="profile-name" id="user-name">Navami</h3>
+                        <div class="book-stats">
+                            <p>Book Lent : <span id="books-lent">10</span></p>
+                            <p>Book Borrowed : <span id="books-borrowed">5</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-right">
+                        <div class="profile-info-card">
+                            <div class="info-item">
+                                <p class="info-label">Email :</p>
+                                <p class="info-value" id="user-email">pkd23cs045@gecskp.ac.in</p>
+                            </div>
+                            
+                            <div class="info-item">
+                                <p class="info-label">Year :</p>
+                                <p class="info-value" id="user-year">2nd year</p>
+                            </div>
+                            
+                            <div class="info-item">
+                                <p class="info-label">Department :</p>
+                                <p class="info-value" id="user-department">CSE</p>
+                            </div>
+                            
+                            <div class="info-item">
+                                <p class="info-label">Best Book I have read :</p>
+                                <p class="info-value" id="user-fav-book">The Silent Patient</p>
+                            </div>
+                            
+                            <button class="edit-button" id="edit-profile-btn">Edit</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Edit Profile</h2>
+            <form id="edit-profile-form">
+                <div class="form-group">
+                    <label for="profile-image-input">Change Profile Picture:</label>
+                    <input type="file" id="profile-image-input" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="edit-name">Name:</label>
+                    <input type="text" id="edit-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-email">Email:</label>
+                    <input type="email" id="edit-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-year">Year:</label>
+                    <select id="edit-year">
+                        <option value="1st year">1st year</option>
+                        <option value="2nd year">2nd year</option>
+                        <option value="3rd year">3rd year</option>
+                        <option value="4th year">4th year</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="edit-department">Department:</label>
+                    <input type="text" id="edit-department" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-fav-book">Best Book I have read:</label>
+                    <input type="text" id="edit-fav-book">
+                </div>
+                <button type="submit" class="save-button">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../static/js/profile.js"></script>
+    <script src="../static/js/home.js"></script>
+</body>
+</html>

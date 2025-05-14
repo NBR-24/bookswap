@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSwap - Request Book</title>
+    <link rel="stylesheet" href="../static/css/request.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar with logo outside navbar -->
+        <div class="sidebar">
+            <!-- Logo outside navbar -->
+            <div class="logo">
+                <h3>BookSwap</h3>
+            </div>
+            
+           <!-- Navigation menu 
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+                    Requests with chevron-down icon 
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="fas fa-exchange-alt"></i> Requests <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#sent">Requests Sent</a>
+                            <a href="#received">Requests Received</a>
+                        </div>
+                    </li>
+                    <li><a href="#"><i class="fas fa-plus-circle"></i> Add Book</a></li>
+                    <li><a href="#"><i class="fas fa-bell"></i> Updates</a></li>
+                </ul>
+            </nav>
+            
+            <div class="user-profile">
+                <img src="images/profile.jpg" alt="User Profile">
+                <div class="user-info">
+                    <h4>Jane Doe</h4>
+                    <p>Active</p>
+                </div>
+            </div>
+        </div> -->
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="back-button">
+                <a href="home.html"><i class="fas fa-arrow-left"></i></a>
+            </div>
+            
+            <div class="book-details">
+                <div class="book-cover">
+                    <img src="../static/images/book1.jpg" alt="Pride and Prejudice Book Cover">
+                    <div class="favorite-icon">
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+                
+                <div class="book-info">
+                    <h1 class="book-title">Pride and Prejudice</h1>
+                    <p class="book-author">By Jane Austene</p>
+                    <p class="book-category">Category : General</p>
+                    
+                    <div class="book-description">
+                        <h2>Description</h2>
+                        <p>"Pride and Prejudice," the celebrated novel by Jane Austen, was first published in 1894 in a special edition known as the Peacock Edition. This edition, published by George Allen, is renowned for its striking cover design by Hugh Thomson, featuring an elaborate gold peacock motif on a dark green cloth cover. Thomson, a prominent illustrator of the time, also provided over 100 detailed illustrations throughout the book, bringing Austen's characters and settings to life with intricate charm. The Peacock Edition is highly sought after by collectors and Austen enthusiasts for its literary significance and exquisite artistic presentation.</p>
+                    </div>
+                    
+                    <button class="request-btn">Request</button>
+                </div>
+            </div>
+            
+            <div class="request-form" style="display: none;">
+                <h2>Request This Book</h2>
+                <form id="bookRequestForm">
+                    <div class="form-group">
+                        <label for="duration">Duration (days):</label>
+                        <input type="number" id="duration" name="duration" min="1" max="30" value="7">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message to Owner:</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Hello, I would like to borrow this book because..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pickup">Pickup Method:</label>
+                        <select id="pickup" name="pickup">
+                            <option value="meet">Meet in Person</option>
+                            <option value="delivery">Request Delivery</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="submit-btn">Send Request</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="request-success" style="display: none;">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Request Sent Successfully!</h2>
+                <p>Your request has been sent to the owner. You'll be notified when they respond.</p>
+                <button class="back-to-browse">Back to Browsing</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="request.js"></script>
+</body>
+</html>

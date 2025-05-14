@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSwap</title>
+    <link rel="stylesheet" href="../static/css/requestreceived.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/home.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo-container">
+                <a href="profile.html">
+                    <img src="../static/images/profile.png" alt="User avatar" class="user-avatar">
+                </a>
+            </div>
+            
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="active"><a href="home.html"><span>Home</span></a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Requests <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="requestsent.html">Requests Sent</a>
+                        <a href="requestreceived.html">Requests Received</a>
+                    </div>
+                </li>
+                <li><a href="addbook.html"><span>Add Book</span></a></li>
+                <li><a href="updates.html"><span>Updates</span></a></li>
+            </ul>
+        </nav>
+            
+            <div class="favorite-btn">
+                <a href="#"><i class="far fa-heart"></i></a>
+            </div>
+        </div>
+
+        <main class="main-content">
+            <header class="header">
+                <h1 class="logo">BookSwap</h1>
+            </header>
+            
+            <section class="content">
+                <h2 class="page-title">Request Received</h2>
+                
+                <div class="requests-container">
+                    <div class="request-card">
+                        <p class="request-by">Requested By:</p>
+                        <p class="requester-name">Joe</p>
+                        <div class="book-image">
+                            <img src="../static/images/book1.jpg" alt="Pride and Prejudice">
+                            <button class="heart-button"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <p class="book-category">Category: General</p>
+                        <p class="book-author">By Jane Austen</p>
+                        <p class="book-title">Pride and Prejudice</p>
+                        <div class="action-buttons">
+                            <button class="approve-button">Approve</button>
+                            <button class="reject-button">Reject</button>
+                        </div>
+                    </div>
+                    
+                    <div class="request-card">
+                        <p class="request-by">Requested By:</p>
+                        <p class="requester-name">Doe</p>
+                        <div class="book-image">
+                            <img src="../static/images/book1.jpg" alt="Pride and Prejudice">
+                            <button class="heart-button"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <p class="book-category">Category: General</p>
+                        <p class="book-author">By Jane Austen</p>
+                        <p class="book-title">Pride and Prejudice</p>
+                        <div class="action-buttons">
+                            <button class="approve-button">Approve</button>
+                            <button class="reject-button">Reject</button>
+                        </div>
+                    </div>
+                    
+                    <div class="request-card">
+                        <p class="request-by">Requested By:</p>
+                        <p class="requester-name">Ria</p>
+                        <div class="book-image">
+                            <img src="../static/images/book1.jpg" alt="Pride and Prejudice">
+                            <button class="heart-button"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <p class="book-category">Category: General</p>
+                        <p class="book-author">By Jane Austen</p>
+                        <p class="book-title">Pride and Prejudice</p>
+                        <div class="action-buttons">
+                            <button class="approve-button">Approve</button>
+                            <button class="reject-button">Reject</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="quote">
+                    <p class="quote-text">"Books and doors are the same thing. You open them, and you go through into another world."</p>
+                    <p class="quote-author">— Jeanette Winterson</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="../static/js/requestreceived.js"></script>
+    <script src="../static/js/home.js"></script>
+</body>
+</html>
